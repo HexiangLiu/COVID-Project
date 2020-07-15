@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>COVID-19</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="ui segment">
+      <h1>A subtitle</h1>
+    </header>
+
+    <div class="ui icon input container">
+      <input type="text" placeholder="Enter your ZIP code" />
+      <i class="inverted circular search link icon"></i>
+    </div>
+
+    <!-- search section -->
+    <section id="search" class="ui grid container">
+      <div class="row">
+        <div class="ui vertical animated button" tabindex="0">
+          <div class="hidden content"><i class="medkit icon"></i></div>
+          <div class="visible content">
+            Testing Sites
+          </div>
+        </div>
+
+        <div class="ui vertical animated button" tabindex="0">
+          <div class="hidden content"><i class="utensils icon"></i></div>
+          <div class="visible content">
+            Free Meals
+          </div>
+        </div>
+
+        <div class="ui vertical animated button" tabindex="0">
+          <div class="hidden content"><i class="compass icon"></i></div>
+          <div class="visible content">
+            All
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- results  -->
+    <section class="ui container">
+      <table class="ui celled table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Job</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Name">James</td>
+            <td data-label="Age">24</td>
+            <td data-label="Job">Engineer</td>
+          </tr>
+          <tr>
+            <td data-label="Name">Jill</td>
+            <td data-label="Age">26</td>
+            <td data-label="Job">Engineer</td>
+          </tr>
+          <tr>
+            <td data-label="Name">Elyse</td>
+            <td data-label="Age">24</td>
+            <td data-label="Job">Designer</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script></script>
+  </body>
+</html>
