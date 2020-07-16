@@ -45,17 +45,45 @@ function getTestingLocation() {
 
 //Function to get and render free meals
 function getFreeMeals() {
-  container.empty();
+  // Get value of typed in zip, store in a variable.
+  // var enteredZip = parseInt($("#user_input").val());
+  // // console.log(enteredZip);
+  // // Empty the container of previously displayed cards
+  // container.empty();
 
-  //Your code
+  // API data
+    // link: https://data.cityofnewyork.us/resource/sp4a-vevi.json
+    var mealURL = "https://data.cityofnewyork.us/resource/sp4a-vevi.json";
 
-  //Make ajax request
+    // see data
+    console.log(mealURL);
 
-  //get an array of the nearest location
+    // Make ajax request
+    $.ajax({
+      url: mealURL,
+      type: "GET",
+      data: {
+        "$limit" : 5000,
+        "$$app_token" : "GJvggkWxbnhHZBd5UOE1oofWH"
+      }
+  }).then(function(data) {
+    alert("Retrieved " + data.length + " records from the dataset!");
+    console.log(data);
 
-  //Loop through the array
+    // get an array of the nearest location
+    
 
-  //create element
+    // Loop through the array
 
-  //append to container
-}
+    // create element
+
+    // append to container
+
+  }).catch(function(error){
+    console.log(error);
+    console.log("Opps, there's an error on your page.")
+  });
+
+  
+} 
+getFreeMeals()
