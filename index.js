@@ -61,7 +61,7 @@ function getTestingLocation() {
   }).then(function (response) {
     // Run a loop that looks at every zip code in the API array.
     for (let i = 0; i < response.length; i++) {
-      // console.log(response[i].physical_address[0].postal_code);
+      console.log(response[i].physical_address[0].postal_code);
       // Check to see the possibleMatch zipcodes from the API are within range of the user's enteredZip
       if (
         possibleMatchArray.includes(response[i].physical_address[0].postal_code)
