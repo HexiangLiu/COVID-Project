@@ -25,7 +25,6 @@ mealButton.on('click', function () {
 });
 
 //Function to get the nearest zip code
-function getNearest(zip) {}
 
 //Function to get and render testing location
 function getTestingLocation() {
