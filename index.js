@@ -77,14 +77,49 @@ function getFreeMeals() {
     // Loop through the array
 
 
-    // set variables
+    // set variables, create elements, append elements
 
-    // School District
-    const district = response.main.temp;
-    // console.log(temp) // in Fahrenheit
-    // creating an element to display temp
-    // $("#currentTemp").append(temp + " " + "&#8457;");
+      // School District
+      const district = data[0].district;
+      console.log(district)
+      // creating an element to display temp
+      // $("#currentTemp").append(temp + " " + "&#8457;");
 
+      // School Name
+      const schoolName = data[0].schoolname;
+      console.log(schoolName)
+      // creating an element to display temp
+      // $("#currentTemp").append(temp + " " + "&#8457;");
+
+      // School Address
+      const siteAddress = data[0].siteaddress;
+      console.log(siteAddress)
+      // creating an element to display temp
+      // $("#currentTemp").append(temp + " " + "&#8457;");  
+
+      // Borough
+      const boro = data[0].city;
+      console.log(boro)
+      // creating an element to display temp
+      // $("#currentTemp").append(temp + " " + "&#8457;");
+
+      // Zip Code
+      const zip = data[0].zip;
+      console.log(zip)
+      // creating an element to display temp
+      // $("#currentTemp").append(temp + " " + "&#8457;");
+
+      // Accessibility
+      const access = data[0].accessibility;
+      console.log(access)
+      // creating an element to display temp
+      // $("#currentTemp").append(temp + " " + "&#8457;");
+
+      // Kosher Status
+      const kosher = data[0].koshermealtype;
+      console.log(kosher)
+      // creating an element to display temp
+      // $("#currentTemp").append(temp + " " + "&#8457;");
 
   }).catch(function(error){
     console.log(error);
