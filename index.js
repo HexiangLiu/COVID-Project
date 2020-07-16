@@ -45,10 +45,7 @@ function getTestingLocation() {
 
 //Function to get and render free meals
 function getFreeMeals() {
-  // Get value of typed in zip, store in a variable.
-  // var enteredZip = parseInt($("#user_input").val());
-  // // console.log(enteredZip);
-  // // Empty the container of previously displayed cards
+  
   // container.empty();
 
   // API data
