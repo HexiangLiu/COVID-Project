@@ -1,83 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="'no-js'">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compressed CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+      integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I="
+      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="index.css" />
-    <title>COVID-19</title>
+
+    <title>Document</title>
   </head>
   <body>
-    <!-- header -->
-    <header class="ui segment">
-      <h1>A subtitle</h1>
+    <header>
+      <div class="container">
+        <h1 class="text-center">COVID-INFO</h1>
+      </div>
     </header>
 
-    <div class="ui icon input container">
-      <input type="text" placeholder="Enter your ZIP code" />
-      <i class="inverted circular search link icon"></i>
-    </div>
-
-    <!-- search section -->
-    <section id="search" class="ui grid container">
-      <div class="row">
-        <div class="ui vertical animated button" tabindex="0">
-          <div class="hidden content"><i class="medkit icon"></i></div>
-          <div class="visible content">
-            Testing Sites
+    <section>
+      <div class="grid-container">
+        <form>
+          <div class="grid-x grid-padding-x">
+            <div class="cell">
+              <div class="input-group">
+                <input
+                  id="user_input"
+                  class="input-group-field"
+                  type="text"
+                  placeholder="Enter your Zip code"
+                />
+                <div class="input-group-button">
+                  <button type="submit" class="button all_btn">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div class="ui vertical animated button" tabindex="0">
-          <div class="hidden content"><i class="utensils icon"></i></div>
-          <div class="visible content">
-            Free Meals
-          </div>
-        </div>
-
-        <div class="ui vertical animated button" tabindex="0">
-          <div class="hidden content"><i class="compass icon"></i></div>
-          <div class="visible content">
-            All
+        </form>
+        <div class="grid-x grid-padding-x">
+          <div class="cell">
+            <div class="button-group align-center">
+              <button class="button" id="testing_btn">Testing Location</button>
+              <button class="button" id="meal_btn">Free Meals</button>
+              <button class="button all_btn">All</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- results  -->
-    <section class="ui container">
-      <table class="ui celled table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Job</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Name">James</td>
-            <td data-label="Age">24</td>
-            <td data-label="Job">Engineer</td>
-          </tr>
-          <tr>
-            <td data-label="Name">Jill</td>
-            <td data-label="Age">26</td>
-            <td data-label="Job">Engineer</td>
-          </tr>
-          <tr>
-            <td data-label="Name">Elyse</td>
-            <td data-label="Age">24</td>
-            <td data-label="Job">Designer</td>
-          </tr>
-        </tbody>
-      </table>
+    <section>
+      <div class="grid-container">
+        <div
+          id="data_container"
+          class="grid-x grid-margin-x small-up-2 medium-up-3"
+        >
+          <div class="cell">
+            <div class="card">
+              <img src="assets/img/generic/rectangle-1.jpg" />
+              <div class="card-section">
+                <h4>This is a row of cards.</h4>
+                <p>This row of cards is embedded in an X-Y Block Grid.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="card">
+              <img src="assets/img/generic/rectangle-1.jpg" />
+              <div class="card-section">
+                <h4>This is a card.</h4>
+                <p>
+                  It has an easy to override visual style, and is appropriately
+                  subdued.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="card">
+              <img src="assets/img/generic/rectangle-1.jpg" />
+              <div class="card-section">
+                <h4>This is a card.</h4>
+                <p>
+                  It has an easy to override visual style, and is appropriately
+                  subdued.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="card">
+              <img src="assets/img/generic/rectangle-1.jpg" />
+              <div class="card-section">
+                <h4>This is a card.</h4>
+                <p>
+                  It has an easy to override visual style, and is appropriately
+                  subdued.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-    <script></script>
+    <!-- Compressed JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"></script>
   </body>
 </html>
