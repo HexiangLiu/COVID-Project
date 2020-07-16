@@ -45,131 +45,109 @@ function getTestingLocation() {
 
 //Function to get and render free meals
 function getFreeMeals() {
-  
-  // container.empty();
 
   // API data
-    // link: https://data.cityofnewyork.us/resource/sp4a-vevi.json
-    var mealURL = "https://data.cityofnewyork.us/resource/sp4a-vevi.json";
+  // link: https://data.cityofnewyork.us/resource/sp4a-vevi.json
+  var mealURL = "https://data.cityofnewyork.us/resource/sp4a-vevi.json";
 
-    // see data
-    // console.log(mealURL);
-
-    // Make ajax request
-    $.ajax({
-      url: mealURL,
-      type: "GET",
-      data: {
-        "$limit" : 5000,
-        "$$app_token" : "GJvggkWxbnhHZBd5UOE1oofWH"
-      }
-  }).then(function(data) {
-    // alert("Retrieved " + data.length + " records from the dataset!");
-    // console.log(data);
-
-
+  // Make ajax request
+  $.ajax({
+    url: mealURL,
+    type: "GET",
+    data: {
+      "$limit": 5000,
+      "$$app_token": "GJvggkWxbnhHZBd5UOE1oofWH"
+    }
+  }).then(function (data) {
     // get an array of the nearest location
-    
 
     // Loop through the array for ZIP code
-    for (let i =0; i <data.length; i++){
-
-      // looking for the zip code
-      // console.log(zip)
-
-      // set variables, create elements, append elements ================================================
+    for (let i = 0; i < data.length; i++) {
+      console.log(data[i].zip)
+      // if (possibleMatchArray.includes(data[i].zip)) {
 
       // creating card =============================
-        // main card div
-        var d1 = $("<div>");
-        d1.attr("class","cell")
+      // main card div
+      var d1 = $("<div>");
+      d1.attr("class", "cell")
 
-        // card div with the data
-        var d2=$("<div>"); 
-        d2.attr("class", "card-selection");
-          
-          // different types of data
-          var h2=$("<h2>");
-          h2.attr("class", "#");
-          
-          var p1=$("<p>");
-          p1.attr("class", "card-text");
-          
-          var p2=$("<p>");
-          p2.attr("class", "card-text");
-          
-          var p3=$("<p>");
-          p3.attr("class", "card-text");
-          
-          var p4=$("<p>");
-          p4.attr("class", "card-text");
-          
-          var p5=$("<p>");
-          p5.attr("class", "card-text");
+      // card div with the data
+      var d2 = $("<div>");
+      d2.attr("class", "card-selection");
 
-          var p6=$("<p>");
-          p6.attr("class", "card-text");
+      // different types of data
+      var h2 = $("<h2>");
+      h2.attr("class", "#");
 
-          d1.append(d2);
-          d1.append(h2);
-          d1.append(p1);
-          d1.append(p2);
-          d1.append(p3);
-          d1.append(p4);
-          d1.append(p5);
-          d1.append(p6);
-      
-          // variables & append ================================
-     
+      var p1 = $("<p>");
+      p1.attr("class", "card-text");
+
+      var p2 = $("<p>");
+      p2.attr("class", "card-text");
+
+      var p3 = $("<p>");
+      p3.attr("class", "card-text");
+
+      var p4 = $("<p>");
+      p4.attr("class", "card-text");
+
+      var p5 = $("<p>");
+      p5.attr("class", "card-text");
+
+      var p6 = $("<p>");
+      p6.attr("class", "card-text");
+
+      d1.append(d2);
+      d1.append(h2);
+      d1.append(p1);
+      d1.append(p2);
+      d1.append(p3);
+      d1.append(p4);
+      d1.append(p5);
+      d1.append(p6);
+
+      // variables & append ================================
+
       // School Name
-      const schoolName = data[0].schoolname;
-      // console.log(schoolName)
+      const schoolName = data[i].schoolname;
       // creating an element to display name in h2 tag
-      h2.text(`School Name: ${schoolName}`);
+      h2.text(schoolName);
 
       // School District
-      const district = data[0].district;
-      // console.log(district)
+      const district = data[i].district;
       // creating an element to display district in p1 tag
       p1.text(`School District: #${district}`);
 
       // School Address
-      const siteAddress = data[0].siteaddress;
-      // console.log(siteAddress)
+      const siteAddress = data[i].siteaddress;
       // creating an element to display address in p2 tag
-      p2.text(`School Address: ${siteAddress}`);  
+      p2.text(`School Address: ${siteAddress}`);
 
       // Borough
-      const boro = data[0].city;
-      // console.log(boro)
+      const boro = data[i].city;
       // creating an element to display boro in p3 tag
       p3.text(`Borough: ${boro}`);
 
       // Zip Code
-      const zip = data[0].zip;
-      // console.log(zip)
+      const zip = data[i].zip;
       // creating an element to display zip in p4 tag
       p4.text(`ZIP Code: ${zip}`);
 
       // Accessibility
-      const access = data[0].accessibility;
-      // console.log(access)
+      const access = data[i].accessibility;
       // creating an element to display accessibility in p5 tag
       p5.text(`Site Accessibility: ${access}`);
 
       // Kosher Status
-      const kosher = data[0].koshermealtype;
-      // console.log(kosher)
+      const kosher = data[i].koshermealtype;
       // creating an element to display kosher status in p6 tag
       p6.text(`Kosher Meal Type: ${kosher}`);
 
       $("#data_container").append(d1);
+      // }
     }
-      
-  }).catch(function(error){
+
+  }).catch(function (error) {
     console.log(error, "Opps, there's an error on your page.");
   });
-
-  
-} 
-getFreeMeals()
+}
