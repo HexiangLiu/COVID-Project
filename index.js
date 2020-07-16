@@ -17,6 +17,7 @@ mainButton.on("click", function () {
 });
 
 testingButton.on("click", function () {
+  getNearestZips();
   getTestingLocation();
 });
 
@@ -25,12 +26,26 @@ mealButton.on("click", function () {
 });
 
 //Function to get the nearest zip code
-
-//Function to get and render testing location
-function getTestingLocation(e) {
+function getNearestZips() {
   // Get value of typed in zip, store in a variable.
   var enteredZip = parseInt($("#user_input").val());
-  // console.log(enteredZip);
+  var queryURL = `https://api.zip-codes.com/ZipCodesAPI.svc/1.0/FindZipCodesInRadius?zipcode=${enteredZip}&minimumradius=0&maximumradius=10&key=M93TF4UKEVM7RB79GPKJ`;
+  // Create an AJAX call to retrieve data
+  $.ajax({
+    url: queryURL,
+    method: "GET",
+  }).then(function (response) {
+    console.log(response);
+    // console.log(response.DataList[1].Code);
+    for (let i = 0; i < 50; i++) {
+      possibleMatch = i;
+      getTestingLocation();
+    }
+  });
+}
+
+//Function to get and render testing location
+function getTestingLocation() {
   // Empty the container of previously displayed cards
   container.empty();
   // This is the API link for testing locations.
@@ -43,13 +58,11 @@ function getTestingLocation(e) {
   }).then(function (response) {
     // Run a loop that looks at every zip code in the API array.
     for (let i = 0; i < response.length; i++) {
+      // console.log(response[i].physical_address[0].postal_code);
       // Turn each of those API zip codes into integers.
       possibleMatch = parseInt(response[i].physical_address[0].postal_code);
       // Check to see the possibleMatch zipcodes from the API are within range of the user's enteredZip
-      if (
-        possibleMatch <= enteredZip + 10 &&
-        possibleMatch >= enteredZip - 10
-      ) {
+      if (possibleMatch === enteredZip) {
         // console.log(response);
         // console.log(response[i].physical_address[0].postal_code);
         // Generate/Fill cards:
