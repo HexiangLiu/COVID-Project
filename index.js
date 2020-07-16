@@ -56,7 +56,7 @@ function getFreeMeals() {
     var mealURL = "https://data.cityofnewyork.us/resource/sp4a-vevi.json";
 
     // see data
-    console.log(mealURL);
+    // console.log(mealURL);
 
     // Make ajax request
     $.ajax({
@@ -67,8 +67,8 @@ function getFreeMeals() {
         "$$app_token" : "GJvggkWxbnhHZBd5UOE1oofWH"
       }
   }).then(function(data) {
-    alert("Retrieved " + data.length + " records from the dataset!");
-    console.log(data);
+    // alert("Retrieved " + data.length + " records from the dataset!");
+    // console.log(data);
 
 
     // get an array of the nearest location
@@ -82,48 +82,47 @@ function getFreeMeals() {
       // School District
       const district = data[0].district;
       console.log(district)
-      // creating an element to display temp
-      // $("#currentTemp").append(temp + " " + "&#8457;");
+      // creating an element to display district
+      // $("#currentTemp").append(`School District: #${district}`);
 
       // School Name
       const schoolName = data[0].schoolname;
       console.log(schoolName)
-      // creating an element to display temp
-      // $("#currentTemp").append(temp + " " + "&#8457;");
+      // creating an element to display name
+      // $("#currentTemp").append(`School Name: ${schoolName}`);
 
       // School Address
       const siteAddress = data[0].siteaddress;
       console.log(siteAddress)
-      // creating an element to display temp
-      // $("#currentTemp").append(temp + " " + "&#8457;");  
+      // creating an element to display address
+      // $("#currentTemp").append(`School Address: ${siteAddress}`);  
 
       // Borough
       const boro = data[0].city;
       console.log(boro)
-      // creating an element to display temp
-      // $("#currentTemp").append(temp + " " + "&#8457;");
+      // creating an element to display boro
+      // $("#currentTemp").append(`Borough: ${boro}`);
 
       // Zip Code
       const zip = data[0].zip;
       console.log(zip)
-      // creating an element to display temp
-      // $("#currentTemp").append(temp + " " + "&#8457;");
+      // creating an element to display zip
+      // $("#currentTemp").append(`ZIP Code: ${zip}`);
 
       // Accessibility
       const access = data[0].accessibility;
       console.log(access)
-      // creating an element to display temp
-      // $("#currentTemp").append(temp + " " + "&#8457;");
+      // creating an element to display accessibility
+      // $("#currentTemp").append(`Site Accessibility: ${access}`);
 
       // Kosher Status
       const kosher = data[0].koshermealtype;
       console.log(kosher)
-      // creating an element to display temp
-      // $("#currentTemp").append(temp + " " + "&#8457;");
+      // creating an element to display kosher status
+      // $("#currentTemp").append(`Kosher Meal Type: ${kosher}`);
 
   }).catch(function(error){
-    console.log(error);
-    console.log("Opps, there's an error on your page.")
+    console.log(error, "Opps, there's an error on your page.");
   });
 
   
