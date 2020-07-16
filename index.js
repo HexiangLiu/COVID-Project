@@ -73,6 +73,7 @@ function getTestingLocation(e) {
                 $("<p>", {
                   class: "card-text",
                   html: `Hours: `,
+                  // Need to address this, sometimes hours are not provided.
                   // html: `Hours: ${response[i].regular_schedule[0].opens_at} - ${response[i].regular_schedule[0].closes_at}`,
                 }),
                 $("<p>", {
