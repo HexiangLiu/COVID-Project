@@ -70,14 +70,21 @@ function getFreeMeals() {
     alert("Retrieved " + data.length + " records from the dataset!");
     console.log(data);
 
+
     // get an array of the nearest location
     
 
     // Loop through the array
 
-    // create element
 
-    // append to container
+    // set variables
+
+    // School District
+    const district = response.main.temp;
+    // console.log(temp) // in Fahrenheit
+    // creating an element to display temp
+    // $("#currentTemp").append(temp + " " + "&#8457;");
+
 
   }).catch(function(error){
     console.log(error);
