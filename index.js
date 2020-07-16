@@ -18,12 +18,14 @@ mainButton.on("click", function () {
 
 testingButton.on("click", function () {
   getNearestZips();
-  getTestingLocation();
+  // getTestingLocation();
 });
 
 mealButton.on("click", function () {
   getFreeMeals();
 });
+
+var possibleMatchArray = [];
 
 //Function to get the nearest zip code
 function getNearestZips() {
@@ -35,17 +37,17 @@ function getNearestZips() {
     url: queryURL,
     method: "GET",
   }).then(function (response) {
-    console.log(response);
+    // console.log(response);
     // console.log(response.DataList[1].Code);
     for (let i = 0; i < 50; i++) {
-      possibleMatch = i;
-      getTestingLocation();
+      possibleMatchArray.push(response.DataList[i].Code);
     }
+    getTestingLocation(enteredZip);
   });
 }
 
 //Function to get and render testing location
-function getTestingLocation() {
+function getTestingLocation(enteredZip) {
   // Empty the container of previously displayed cards
   container.empty();
   // This is the API link for testing locations.
@@ -59,10 +61,8 @@ function getTestingLocation() {
     // Run a loop that looks at every zip code in the API array.
     for (let i = 0; i < response.length; i++) {
       // console.log(response[i].physical_address[0].postal_code);
-      // Turn each of those API zip codes into integers.
-      possibleMatch = parseInt(response[i].physical_address[0].postal_code);
       // Check to see the possibleMatch zipcodes from the API are within range of the user's enteredZip
-      if (possibleMatch === enteredZip) {
+      if (possibleMatchArray.includes(enteredZip)) {
         // console.log(response);
         // console.log(response[i].physical_address[0].postal_code);
         // Generate/Fill cards:
