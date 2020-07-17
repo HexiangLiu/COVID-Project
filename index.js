@@ -79,39 +79,44 @@ function getTestingLocation(possibleMatchArray) {
         })
           .append(
             $('<div>', {
-              class: 'card',
+              class: 'card testing',
             }).append(
               $('<div>', {
                 class: 'card-selection',
-              }).append(
-                $('<h2>', {
-                  class: '#',
-                  text: `${response[i].alternate_name}`,
-                }),
-                $('<p>', {
-                  text: `Cite Location: ${response[i].physical_address[0].address_1}`,
-                }),
-                $('<p>', {
-                  class: 'card-text',
-                  html: `Hours: `,
-                  // Need to address this, sometimes hours are not provided.
-                  html: `Hours: ${
-                    response[i].regular_schedule[0]
-                      ? response[i].regular_schedule[0].opens_at +
-                        '-' +
-                        response[i].regular_schedule[0].closes_at
-                      : 'No hours avaliable'
-                  }`,
-                }),
-                $('<p>', {
-                  class: 'card-text',
-                  html: `Phone Number: ${
-                    response[i].phones[0]
-                      ? response[i].phones[0].number
-                      : 'No phone number found'
-                  }`,
-                })
-              )
+              })
+                .append($('<i class="fas fa-user-md"></i>'))
+                .append(
+                  $('<h2>', {
+                    class: '#',
+                    text: `${response[i].alternate_name}`,
+                  }),
+                  $('<p>', {
+                    text: `Address: ${response[i].physical_address[0].address_1}`,
+                  }),
+                  $('<p>', {
+                    class: 'card-text',
+                    html: `Hours: `,
+                    // Need to address this, sometimes hours are not provided.
+                    html: `Hours: ${
+                      response[i].regular_schedule[0]
+                        ? response[i].regular_schedule[0].opens_at +
+                          '-' +
+                          response[i].regular_schedule[0].closes_at
+                        : 'No hours avaliable'
+                    }`,
+                  }),
+                  $('<a>', {
+                    class: 'card-text',
+                    href: `tel: ${
+                      response[i].phones[0] && response[i].phones[0].number
+                    }`,
+                    html: `Phone Number: ${
+                      response[i].phones[0]
+                        ? response[i].phones[0].number
+                        : 'No phone number found'
+                    }`,
+                  })
+                )
             )
           )
           .appendTo($('#data_container'));
@@ -145,11 +150,13 @@ function getFreeMeals(possibleMatchArray) {
         var d1 = $('<div>');
         d1.attr('class', 'cell');
 
-        var d1a = $('<div>').addClass('card');
+        var d1a = $('<div>').addClass('card meal');
 
         // card div with the data
         var d2 = $('<div>');
-        d2.attr('class', 'card-selection');
+        d2.attr('class', 'card-selection').append(
+          $('<i class="fas fa-utensils"></i>')
+        );
 
         // different types of data
         var h2 = $('<h2>');
