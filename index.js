@@ -94,6 +94,9 @@ function getTestingLocation(possibleMatchArray) {
                     text: `Address: ${response[i].physical_address[0].address_1}`,
                   }),
                   $('<p>', {
+                    text: `Zip Code: ${response[i].physical_address[0].postal_code}`,
+                  }),
+                  $('<p>', {
                     class: 'card-text',
                     html: `Hours: `,
                     // Need to address this, sometimes hours are not provided.
