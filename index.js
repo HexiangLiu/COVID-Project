@@ -79,7 +79,7 @@ function getTestingLocation(possibleMatchArray) {
         })
           .append(
             $('<div>', {
-              class: 'card',
+              class: 'card testing',
             }).append(
               $('<div>', {
                 class: 'card-selection',
@@ -145,7 +145,7 @@ function getFreeMeals(possibleMatchArray) {
         var d1 = $('<div>');
         d1.attr('class', 'cell');
 
-        var d1a = $('<div>').addClass('card');
+        var d1a = $('<div>').addClass('card meal');
 
         // card div with the data
         var d2 = $('<div>');
