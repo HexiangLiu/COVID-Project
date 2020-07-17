@@ -1,3 +1,9 @@
 body {
-  font-size: 1.5rem !important;
+  color: red;
+  background-image: linear-gradient(to right bottom, red, green);
+}
+
+.cell:hover {
+  transition: all 0.3s;
+  transform: translateY(-3px) scale(1.1);
 }
