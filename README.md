@@ -10,7 +10,7 @@ As a website user, I can type in my zipcode and select a button to see the neare
 
 ## Deployment
 
-[URL]()
+[URL](https://henry-liu1997.github.io/COVID-Project/)
 
 ## Built With
 
