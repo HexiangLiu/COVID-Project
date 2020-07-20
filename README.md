@@ -28,6 +28,6 @@ As a website user, I can type in my zipcode and select a button to see the neare
 - **Jonayah Jackson** (https://github.com/JonayahJ)
 - **Nathan Pecchia** (https://github.com/SeptumPrince)
 - **Xavier Jackson** (https://github.com/xj96)
-- **Pablo Garcia** ()
+- **Pablo Garcia** (https://github.com/ColumCOD1)
 
 ![Website Screenshot](COVID.jpg)
