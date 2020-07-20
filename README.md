@@ -10,7 +10,7 @@ As a website user, I can type in my zipcode and select a button to see the neare
 
 ## Deployment
 
-[URL](https://henry-liu1997.github.io/COVID-Project/)
+[URL](https://hexiangliu.github.io/COVID-Project/)
 
 ## Built With
 
@@ -23,7 +23,7 @@ As a website user, I can type in my zipcode and select a button to see the neare
 
 ## Team Members
 
-- **Henry Liu** (https://github.com/Henry-Liu1997)
+- **Henry Liu** (https://github.com/HexiangLiu)
 - **Jonayah Jackson** (https://github.com/JonayahJ)
 - **Nathan Pecchia** (https://github.com/SeptumPrince)
 - **Xavier Jackson** (https://github.com/xj96)
