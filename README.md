@@ -29,4 +29,4 @@ As a website user, I can type in my zipcode and select a button to see the neare
 - **Xavier Jackson** (https://github.com/xj96)
 - **Pablo Garcia** ()
 
-![Website Screenshot]()
+![Website Screenshot](COVID.jpg)
