@@ -12,6 +12,7 @@ As a website user, I can type in my zipcode and select a button to see the neare
 
 [URL](https://bit.ly/NQR_app)
 
+
 ## Built With
 
 - [Foundation](https://get.foundation/) - The web framework used
@@ -23,10 +24,10 @@ As a website user, I can type in my zipcode and select a button to see the neare
 
 ## Team Members
 
-- **Henry Liu** (https://github.com/Henry-Liu1997)
+- **Henry Liu** (https://github.com/HexiangLiu)
 - **Jonayah Jackson** (https://github.com/JonayahJ)
 - **Nathan Pecchia** (https://github.com/SeptumPrince)
 - **Xavier Jackson** (https://github.com/xj96)
 - **Pablo Garcia** ()
 
-![Website Screenshot]()
+![Website Screenshot](COVID.jpg)
