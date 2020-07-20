@@ -10,7 +10,8 @@ As a website user, I can type in my zipcode and select a button to see the neare
 
 ## Deployment
 
-[URL](https://hexiangliu.github.io/COVID-Project/)
+[URL](https://bit.ly/NQR_app)
+
 
 ## Built With
 
