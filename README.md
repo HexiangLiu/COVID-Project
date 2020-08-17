@@ -23,6 +23,7 @@ As COVID-19 quarantine guidelines begin to relax and local businesses reopen, ma
 
 To use this application, click the link above. You will be asked to enter you ZIP code (must be an NYC ZIP). You can click "Search" or "All" to see all testing and free meals locations within a close proximity of your home.
 
+
 Testing locations will render as blue cards whereas Free Meals locations will render as red cards. To narrow your search to one or the other, you can click the appropriate button.
 
 ## Technologies
@@ -36,12 +37,14 @@ Testing locations will render as blue cards whereas Free Meals locations will re
 
 ## Contributors
 
-- **Henry Liu** (https://github.com/Henry-Liu1997)
+- **Henry Liu** (https://github.com/HexiangLiu)
 - **Jonayah Jackson** (https://github.com/JonayahJ)
 - **Nathan Pecchia** (https://github.com/SeptumPrince)
 - **Xavier Jackson** (https://github.com/xj96)
 - **Pablo Garcia** (https://github.com/ColumCOD1)
 
+
 ## Look
 
 ![Website Screenshot](Screenshot.png)
+

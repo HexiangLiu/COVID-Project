@@ -1,102 +1,86 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Compressed CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-      integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I="
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/c5d39fa8cf.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Compressed CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=Montserrat&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/c5d39fa8cf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Neighborhood Quarantine Resources</title>
+</head>
 
-    <title>Neighborhood Resources</title>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <h1 class="heading--1 text-center">
-          Neighborhood Resources
-        </h1>
-        <h3 class="heading--2">
-          Use your zip code to find nearby Covid-19 testing and free meal site
-          locations
-        </h3>
-      </div>
-    </header>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="heading--1 text-center">
+        Neighborhood Resources
+      </h1>
+      <h3 class="heading--2">
+        Use your zip code to find nearby Covid-19 testing and free meal site
+        locations
+      </h3>
+    </div>
+  </header>
 
-    <section>
-      <div class="grid-container">
-        <form>
-          <div class="grid-x grid-padding-x">
-            <div class="cell">
-              <div class="input-group">
-                <input
-                  id="user_input"
-                  class="input-group-field"
-                  type="text"
-                  placeholder="Enter your Zip code"
-                />
-                <div class="input-group-button">
-                  <button type="submit" class="button all_btn hollow">
-                    Search
-                  </button>
-                </div>
+  <section>
+    <div class="grid-container">
+      <form>
+        <div class="grid-x grid-padding-x">
+          <div class="cell">
+            <div class="input-group">
+              <input id="user_input" class="input-group-field" type="text" placeholder="Enter your Zip code" />
+              <div class="input-group-button">
+                <button type="submit" class="button all_btn hollow">
+                  Search
+                </button>
               </div>
             </div>
           </div>
-        </form>
-        <div class="grid-x grid-padding-x">
-          <div class="cell">
-            <div class="button-group align-center">
-              <button class="button" id="testing_btn">
-                Testing Location
-              </button>
-              <button class="button" id="meal_btn">Free Meals</button>
-              <button class="button all_btn">All</button>
-            </div>
+        </div>
+      </form>
+      <div class="grid-x grid-padding-x">
+        <div class="cell">
+          <div class="button-group align-center">
+            <button class="button" id="testing_btn">
+              Testing Location
+            </button>
+            <button class="button" id="meal_btn">Free Meals</button>
+            <button class="button all_btn">All</button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <div class="grid-container">
-        <div
-          id="data_container"
-          class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-4"
-        >
-          <div class="card home_card">
-            <div class="card-section">
-              <h2 class="text-center">Welcome to our resources</h2>
-              <p>
-                As COVID-19 quarantine guidelines begin to relax and local
-                businesses reopen, many New Yorkers are feeling comfortable
-                enough to leave their homes. In order to keep our vulnerable
-                neighbors safe and taken care of, our website helps residents
-                locate the nearest Covid-19 testing sites and free meals
-                locations.
-              </p>
-            </div>
+  <section>
+    <div class="grid-container">
+      <div id="data_container" class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-4">
+        <div class="card home_card">
+          <div class="card-section">
+            <h2 class="text-center">Welcome to our resources</h2>
+            <p>
+              As COVID-19 quarantine guidelines begin to relax and local
+              businesses reopen, many New Yorkers are feeling comfortable
+              enough to leave their homes. In order to keep our vulnerable
+              neighbors safe and taken care of, our website helps residents
+              locate the nearest Covid-19 testing sites and free meals
+              locations.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Compressed JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"></script>
-    <script src="index.js"></script>
-  </body>
+  <!-- Compressed JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>

@@ -39,7 +39,7 @@ function getNearestZips(getWhat) {
   // Get value of typed in zip, store in a variable.
   enteredZip = parseInt($('#user_input').val());
 
-  var queryURL = `https://api.zip-codes.com/ZipCodesAPI.svc/1.0/FindZipCodesInRadius?zipcode=${enteredZip}&minimumradius=0&maximumradius=10&key=IAM4XKGV1BKTQU1HX46O`;
+  var queryURL = `https://api.zip-codes.com/ZipCodesAPI.svc/1.0/FindZipCodesInRadius?zipcode=${enteredZip}&minimumradius=0&maximumradius=10&key=BQQCGC5WO7EUS1H6J4K1`;
 
   // Create an AJAX call to retrieve the zip code near to user's location
   $.ajax({
